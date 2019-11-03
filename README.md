@@ -1,5 +1,7 @@
 # miniproject2_statistic_calculator
 
+[![Build Status](https://travis-ci.com/wl328Weiminli/miniproject2_statistic_calculator.svg?branch=master)](https://travis-ci.com/wl328Weiminli/miniproject2_statistic_calculator)
+
 ## Team members
  * Weimin Li UCID: wl328
  * Jiaxin Du UCID: jd688
