@@ -1,10 +1,10 @@
 # miniproject2_statistic_calculator
 
-##Team members
+## Team members
  * Weimin Li UCID: wl328
  * Jiaxin Du UCID: jd688
  
-##Change Log
+## Change Log
 
 - [x] add basic Calculators _--Weimin Li_
 - [ ] add Population Mean
@@ -23,48 +23,49 @@
 - [ ] add Sample Standard Deviation
 - [ ] add Variance of sample proportion
 
-##Functions
+## Functions
+Function description
 
-###Population Mean
-
-
-###Median
+### Population Mean
 
 
-###Mode
+### Median
 
 
-###Standard Deviation
+### Mode
 
 
-###Variance of population proportion
+### Standard Deviation
 
 
-###Z-Score
+### Variance of population proportion
 
 
-###Standardized score
+### Z-Score
 
 
-###Population Correlation Coefficient
+### Standardized score
 
 
-###Confidence Interval
+### Population Correlation Coefficient
 
 
-###Population Variance
+### Confidence Interval
 
 
-###P Value
+### Population Variance
 
 
-###Proportion
+### P Value
 
 
-###Sample Mean
+### Proportion
 
 
-###Sample Standard Deviation
+### Sample Mean
 
 
-###Variance of sample proportion
+### Sample Standard Deviation
+
+
+### Variance of sample proportion
