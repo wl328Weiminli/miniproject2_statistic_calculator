@@ -29,7 +29,19 @@
 Function description
 
 ### Population Mean
+The population mean is an average of a group characteristic. The group could be a person, item, or thing, like “all the people living in the United States” or “all dog owners in Georgia”. A characteristic is just an item of interest. For example:
 
+The formula to find the population mean is:
+
+μ = (Σ * X)/ N
+
+where:
+
+**Σ** means “the sum of.”
+
+**X** = all the individual items in the group.
+
+**N** = the number of items in the group.
 
 ### Median
 
