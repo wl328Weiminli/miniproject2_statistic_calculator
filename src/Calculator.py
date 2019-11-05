@@ -1,13 +1,11 @@
-def addition(a, b):
-    a = int(a)
-    b = int(b)
-    c = a + b
-    return c
+def addition(num):
+    n_sum = 0.0
+    for i in range(len(num)):
+        n_sum += num[i]
+    return n_sum
 
 
 def subtraction(a, b):
-    a = int(a)
-    b = int(b)
     c = b - a
     return c
 
@@ -20,21 +18,17 @@ def multiplication(a, b):
 
 
 def division(a, b):
-    a = int(a)
-    b = int(b)
     c = b / a
     c = round(c, 9)
     return c
 
 
 def square(a):
-    a = int(a)
     c = a ** 2
     return c
 
 
 def square_root(a):
-    a = int(a)
     c = a ** 0.5
     if c > 10:
         c = round(c, 8)
@@ -50,8 +44,8 @@ class Calculator:
     def __init__(self):
         pass
 
-    def addition(self, a, b):
-        self.result = addition(a, b)
+    def addition(self, num):
+        self.result = addition(num)
         return self.result
 
     def subtraction(self, a, b):
