@@ -111,3 +111,6 @@ if __name__ == '__main__':
     interval = Confidence_Interval(num_list)
     print("this interval")
     print(interval)
+    pro = proportion(num_list)
+    print("this is prop")
+    print(pro)
