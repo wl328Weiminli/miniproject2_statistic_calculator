@@ -46,12 +46,17 @@ def Population_Variance(num):
     return square(deviation)
 
 
-def Variance_of_population_proportion(num):
+def proportion(num):
     proportion_list = []
     for g in num:
         h = g / addition(num)
         proportion_list.append(h)
-    return Population_Variance(proportion_list)
+    return proportion_list
+
+
+def Variance_of_population_proportion(num):
+    variance_p = proportion(num)
+    return Population_Variance(variance_p)
 
 
 def Z_Score(num):

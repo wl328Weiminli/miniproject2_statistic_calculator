@@ -29,7 +29,7 @@ class MyTestCase(unittest.TestCase):
         test_data = CsvReader('/src/Test_Multiplication.csv').data
         pprint(test_data)
         for row in test_data:
-            self.assertEqual(self.calculator.multiplication(row['Value 1'], row['Value 2']), int(row['Result']))
+            self.assertEqual(self.calculator.multiplication(int(row['Value 1']), int(row['Value 2'])), int(row['Result']))
             self.assertEqual(self.calculator.result, int(row['Result']))
 
     def test_division(self):
