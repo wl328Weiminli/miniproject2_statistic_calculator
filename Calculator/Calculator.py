@@ -1,39 +1,9 @@
-def addition(num):
-    n_sum = 0.0
-    for i in range(len(num)):
-        n_sum += num[i]
-    return n_sum
-
-
-def subtraction(a, b):
-    c = b - a
-    return c
-
-
-def multiplication(a, b):
-    c = a * b
-    return c
-
-
-def division(a, b):
-    c = b / a
-    c = round(c, 9)
-    return c
-
-
-def square(a):
-    c = a ** 2
-    return c
-
-
-def square_root(a):
-    c = a ** 0.5
-    if c > 10:
-        c = round(c, 8)
-    else:
-        c = round(c, 9)
-
-    return c
+from Calculator.Subtraction import subtraction
+from Calculator.Addition import addition
+from Calculator.Multiplication import multiplication
+from Calculator.Division import division
+from Calculator.Square import square
+from Calculator.SquareRoot import square_root
 
 
 class Calculator:
