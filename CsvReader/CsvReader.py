@@ -18,7 +18,7 @@ class CsvReader:
                     self.data.append(row)
         except OSError:
             print('cannot open', filepath)
-        pprint(self.data)
+        #pprint(self.data)
 
     def return_data_as_objects(self, class_name):
         objects = []

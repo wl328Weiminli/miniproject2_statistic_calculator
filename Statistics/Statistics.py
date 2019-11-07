@@ -1,4 +1,4 @@
-from Calculator import *
+from Calculator.Calculator import Calculator
 import random
 
 
@@ -103,32 +103,41 @@ def Sample_Standard_Deviation(num):
     sample_average = sample_mean(num)
     return Population_Standard_Deviation(sample_average)
 
+class Statistics(Calculator):
+    data = []
 
-if __name__ == '__main__':
-    num_list = [1, 2, 3, 50, 1, 1, 5, 6]
-    num1_list = [2, 3, 4, 5, 1, 5, 8, 8]
-    mean = population_Mean(num_list)
-    print("mean is :")
-    print(mean)
-    median = Median(num_list)
-    print(median)
-    mode1 = mode(num_list)
-    print(mode1)
-    sd = Population_Standard_Deviation(num_list)
-    print("this is dev")
-    print(sd)
-    va = Population_Variance(num_list)
-    print("this is var")
-    print(va)
-    scoreT = Z_Score(num_list)
-    print(scoreT)
-    t_z1_z2 = Population_Correlation_Coefficient(num_list, num1_list)
-    print(t_z1_z2)
-    variance_prop0ration = Variance_of_population_proportion(num_list)
-    print(variance_prop0ration)
-    interval = Confidence_Interval(num_list)
-    print("this interval")
-    print(interval)
-    pro = proportion(num_list)
-    print("this is prop")
-    print(pro)
+    def __init__(self):
+        super().__init__()
+
+    def mean(self):
+        self.result = mean(self.data)
+        return self.result
+
+    if __name__ == '__main__':
+        num_list = [1, 2, 3, 50, 1, 1, 5, 6]
+        num1_list = [2, 3, 4, 5, 1, 5, 8, 8]
+        mean = population_Mean(num_list)
+        print("mean is :")
+        print(mean)
+        median = Median(num_list)
+        print(median)
+        mode1 = mode(num_list)
+        print(mode1)
+        sd = Population_Standard_Deviation(num_list)
+        print("this is dev")
+        print(sd)
+        va = Population_Variance(num_list)
+        print("this is var")
+        print(va)
+        scoreT = Z_Score(num_list)
+        print(scoreT)
+        t_z1_z2 = Population_Correlation_Coefficient(num_list, num1_list)
+        print(t_z1_z2)
+        variance_prop0ration = Variance_of_population_proportion(num_list)
+        print(variance_prop0ration)
+        interval = Confidence_Interval(num_list)
+        print("this interval")
+        print(interval)
+        pro = proportion(num_list)
+        print("this is prop")
+        print(pro)
