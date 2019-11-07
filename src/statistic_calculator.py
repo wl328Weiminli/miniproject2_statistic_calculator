@@ -1,4 +1,11 @@
 from Calculator import *
+import random
+
+
+def sample_method(num):
+    r = random.randint(30, 51)
+    sample_list = random.sample(num, r)
+    return sample_list
 
 
 def population_Mean(num):
@@ -84,6 +91,17 @@ def Confidence_Interval(num):
     d1 = Population_Standard_Deviation(num)
     l1 = square_root(len(num))
     return [x1 - z_value*d1 / l1, x1 + z_value*d1 / l1]
+
+
+def sample_mean(num):
+    sample_list1 = sample_method(num)
+    print(sample_list1)
+    return population_Mean(sample_list1)
+
+
+def Sample_Standard_Deviation(num):
+    sample_average = sample_mean(num)
+    return Population_Standard_Deviation(sample_average)
 
 
 if __name__ == '__main__':
