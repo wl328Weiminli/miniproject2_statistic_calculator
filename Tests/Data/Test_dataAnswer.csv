@@ -1,2 +1,2 @@
-average,median,mode,deviation,variance
-50.179,50.0,41,28.70956215,824.2389588447127
+average,median,mode,deviation,variance,proportionVariance
+50.179,50.0,41,28.70956215,824.2389588447127,3.27347612449e-07

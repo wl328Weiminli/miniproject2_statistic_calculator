@@ -10,7 +10,10 @@ class MyTestCase(unittest.TestCase):
     column = [int(row['data1']) for row in test_data]
     column2 = [int(row['data2']) for row in test_data]
     test_answer = CsvReader("Tests/Data/Test_dataAnswer.csv").data
-    pprint(column)
+    proportion_answer = CsvReader("Tests/Data/Test_proportionAnswer.csv").data
+    z_scoreAnswer = CsvReader("Tests/Data/Test_zScoreAnswer.csv").data
+    answer_column = [float(row['proportion']) for row in proportion_answer]
+    answer_column1 = [float(row['z_score']) for row in z_scoreAnswer]
 
     def setUp(self) -> None:
         self.statistics = Statistics()
@@ -24,35 +27,48 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.statistics.population_mean(self.column), float(row['average']))
         self.assertEqual(self.statistics.result, float(row['average']))
 
-    def test_median_statistic(self):
+    def test_median_statistics(self):
         for row in self.test_answer:
             pprint(row["median"])
         self.assertEqual(self.statistics.median(self.column), float(row['median']))
         self.assertEqual(self.statistics.result, float(row['median']))
 
-    def test_mode_statistic(self):
+    def test_mode_statistics(self):
         for row in self.test_answer:
             pprint(row["mode"])
         self.assertEqual(self.statistics.mode(self.column), [float(row['mode'])])
         self.assertEqual(self.statistics.result, [float(row['mode'])])
 
-    def test_deviation_statistic(self):
+    def test_deviation_statistics(self):
         for row in self.test_answer:
             pprint(row["deviation"])
         self.assertEqual(self.statistics.population_standard_deviation(self.column), float(row['deviation']))
         self.assertEqual(self.statistics.result, float(row['deviation']))
 
-    def test_variance_statistic(self):
+    def test_variance_statistics(self):
         for row in self.test_answer:
             pprint(row["variance"])
         self.assertEqual(self.statistics.population_variance(self.column), float(row['variance']))
         self.assertEqual(self.statistics.result, float(row['variance']))
 
-    def test_proportion_statistic(self):
-        proportion_answer = CsvReader("Tests/Data/Test_proportionAnswer.csv").data
-        answer_column = [float(row['proportion']) for row in proportion_answer]
-        self.assertEqual(self.statistics.proportion(self.column), answer_column)
-        self.assertEqual(self.statistics.result, answer_column)
+    def test_proportion_statistic_statistics(self):
+        self.assertEqual(self.statistics.proportion(self.column), self.answer_column)
+        self.assertEqual(self.statistics.result, self.answer_column)
+
+    def test_variance_of_population_proportion_statistics(self):
+        for row in self.test_answer:
+            pprint(row["proportionVariance"])
+        self.assertEqual(self.statistics.variance_of_population_proportion(self.column), float(row['proportionVariance']))
+        self.assertEqual(self.statistics.result, float(row['proportionVariance']))
+
+    def test_z_score_statistics(self):
+        self.assertEqual(self.statistics.z_score(self.column), self.answer_column1)
+        self.assertEqual(self.statistics.result, self.answer_column1)
+
+    def test_population_correlation_coefficient_statistics(self):
+        pass
+
+
 
 
 
