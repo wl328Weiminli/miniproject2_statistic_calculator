@@ -48,6 +48,14 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.statistics.population_variance(self.column), float(row['variance']))
         self.assertEqual(self.statistics.result, float(row['variance']))
 
+    def test_proportion_statistic(self):
+        proportion_answer = CsvReader("Tests/Data/Test_proportionAnswer.csv").data
+        answer_column = [float(row['proportion']) for row in proportion_answer]
+        self.assertEqual(self.statistics.proportion(self.column), answer_column)
+        self.assertEqual(self.statistics.result, answer_column)
+
+
+
 
 if __name__ == '__main__':
     unittest.main()
