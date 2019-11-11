@@ -51,7 +51,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.statistics.population_variance(self.column), float(row['variance']))
         self.assertEqual(self.statistics.result, float(row['variance']))
 
-    def test_proportion_statistic_statistics(self):
+    def test_proportion_statistics(self):
         self.assertEqual(self.statistics.proportion(self.column), self.answer_column)
         self.assertEqual(self.statistics.result, self.answer_column)
 
@@ -66,9 +66,12 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.statistics.result, self.answer_column1)
 
     def test_population_correlation_coefficient_statistics(self):
-        print("test corre")
         pprint(self.statistics.population_correlation_coefficient(self.column, self.column1))
-        #pass
+        for row in self.test_answer:
+            pprint(row["proportionVariance"])
+        self.assertEqual(self.statistics.population_correlation_coefficient(self.column, self.column1),
+                         float(row['population_correlation_coefficient_statistics']))
+        self.assertEqual(self.statistics.result, float(row['population_correlation_coefficient_statistics']))
 
     def test_confidence_interval_statistics(self):
         pprint(self.statistics.confidence_interval(self.column))
@@ -80,11 +83,6 @@ class MyTestCase(unittest.TestCase):
                 interval_result.append(fl)
         self.assertEqual(self.statistics.confidence_interval(self.column), interval_result)
         self.assertEqual(self.statistics.result, interval_result)
-
-
-
-
-
 
 
 if __name__ == '__main__':
