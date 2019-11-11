@@ -99,9 +99,12 @@ class MyTestCase(unittest.TestCase):
                          float(row['sample_standard_deviation']))
         self.assertEqual(self.statistics.result, float(row['sample_standard_deviation']))
 
-    # def test_sample_variance_proportion(self):
-        #print("this is sample_variance_proportion")
-        #pprint(self.statistics.sample_variance_proportion(self.column))
+    def test_sample_variance_proportion(self):
+        for row in self.test_answer:
+            pprint(row['sample_variance_proportion'])
+        self.assertEqual(self.statistics.sample_variance_proportion(self.sample_column),
+                         float(row['sample_variance_proportion']))
+        self.assertEqual(self.statistics.result, float(row['sample_variance_proportion']))
 
 
 if __name__ == '__main__':
