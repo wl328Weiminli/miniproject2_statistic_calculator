@@ -19,6 +19,7 @@
 - [x] add Confidence Interval and run the test _--Weimin Li_
 - [x] add Population Variance and run the test _--Weimin Li_
 - [x] add and pass the travis-ci _--jiaxin Du_
+- [x] build the sampe function to generate the sample _--jiaxin Du_
 - [x] add P Value and run the test _--jiaxin Du_
 - [x] add Proportion and run the test _--jiaxin Du_
 - [x] add Sample Mean and run the test _--jiaxin Du_
