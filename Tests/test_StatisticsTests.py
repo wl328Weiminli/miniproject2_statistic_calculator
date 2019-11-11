@@ -8,7 +8,7 @@ from pprint import pprint
 class MyTestCase(unittest.TestCase):
     test_data = CsvReader('Tests/Data/Test_Data.csv').data
     column = [int(row['data1']) for row in test_data]
-    column2 = [int(row['data2']) for row in test_data]
+    column1 = [int(row['data2']) for row in test_data]
     test_answer = CsvReader("Tests/Data/Test_dataAnswer.csv").data
     proportion_answer = CsvReader("Tests/Data/Test_proportionAnswer.csv").data
     z_scoreAnswer = CsvReader("Tests/Data/Test_zScoreAnswer.csv").data
@@ -66,7 +66,21 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.statistics.result, self.answer_column1)
 
     def test_population_correlation_coefficient_statistics(self):
-        pass
+        print("test corre")
+        pprint(self.statistics.population_correlation_coefficient(self.column, self.column1))
+        #pass
+
+    def test_confidence_interval_statistics(self):
+        pprint(self.statistics.confidence_interval(self.column))
+        for row in self.test_answer:
+            interval_element = row["confidence_interval"].split(",", 1)
+            interval_result = []
+            for iE in interval_element:
+                fl = float(iE)
+                interval_result.append(fl)
+        self.assertEqual(self.statistics.confidence_interval(self.column), interval_result)
+        self.assertEqual(self.statistics.result, interval_result)
+
 
 
 

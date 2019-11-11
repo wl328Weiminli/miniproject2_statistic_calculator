@@ -1,2 +1,2 @@
-average,median,mode,deviation,variance,proportionVariance
-50.179,50.0,41,28.70956215,824.2389588447127,3.27347612449e-07
+average,median,mode,deviation,variance,proportionVariance,confidence_interval
+50.179,50.0,41,28.70956215,824.2389588447127,3.27347612449e-07,"50.156303098243754, 50.20169690175625"

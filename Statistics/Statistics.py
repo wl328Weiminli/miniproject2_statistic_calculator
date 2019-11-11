@@ -41,8 +41,8 @@ class Statistics(Calculator):
         self.result = z_score(data)
         return self.result
 
-    def population_correlation_coefficient(self, data):
-        self.result = population_correlation_coefficient(data)
+    def population_correlation_coefficient(self, data, data1):
+        self.result = population_correlation_coefficient(data, data1)
         return self.result
 
     def variance_of_population_proportion(self, data):
