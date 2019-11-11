@@ -83,10 +83,15 @@ in the (), you should input a list like [1, 2, 3, 4, 5, 1, 1, 4, 8]
 ### Variance of population proportion
 In the statistical description, the variance is used to calculate the difference between each variable (observation) and the population mean. In order to avoid the sum of the mean deviations being zero, the square of the mean difference and the content of the sample, the statistics use the sum of squared mean deviations to describe the degree of variation of the variables. The formula for calculating the variance of the population:
 ![images](/images/b.PNG)
-
-
+### How to use it in our project
+     population_variance()
+in the (), you should input a list like [1, 2, 3, 4, 5, 1, 1, 4, 8]
 
 ### Z-Score
+### What Is a Z-Score?
+A Z-score is a numerical measurement used in statistics of a value's relationship to the mean (average) of a group of values, measured in terms of standard deviations from the mean. If a Z-score is 0, it indicates that the data point's score is identical to the mean score. A Z-score of 1.0 would indicate a value that is one standard deviation from the mean. Z-scores may be positive or negative, with a positive value indicating the score is above the mean and a negative score indicating it is below the mean.
+
+Formual
 
 
 ### Standardized score
