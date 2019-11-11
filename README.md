@@ -91,16 +91,46 @@ in the (), you should input a list like [1, 2, 3, 4, 5, 1, 1, 4, 8]
 ### What Is a Z-Score?
 A Z-score is a numerical measurement used in statistics of a value's relationship to the mean (average) of a group of values, measured in terms of standard deviations from the mean. If a Z-score is 0, it indicates that the data point's score is identical to the mean score. A Z-score of 1.0 would indicate a value that is one standard deviation from the mean. Z-scores may be positive or negative, with a positive value indicating the score is above the mean and a negative score indicating it is below the mean.
 
-Formual
+Formula
+![images](/images/c.PNG)
+
+### How to use it in our project
+    z_score()
+in the (), you should input a list like [1, 2, 3, 4, 5, 1, 1, 4, 8]
+each number in the list will get a z_score. You will get a list of the each number's z score
 
 
 ### Standardized score
-
+It is same with z score
 
 ### Population Correlation Coefficient
+Correlation coefficients measure the strength of association between two variables. The most common correlation coefficient, called the Pearson product-moment correlation coefficient, measures the strength of the linear association between variables measured on an interval or ratio scale.
+
+Formula:
+Population correlation coefficient. The correlation ρ between two variables is:
+
+ρ = [ 1 / N ] * Σ { [ (Xi - μX) / σx ]
+* [ (Yi - μY) / σy ] }
+
+where N is the number of observations in the population, Σ is the summation symbol, Xi is the X value for observation i, μX is the population mean for variable X, Yi is the Y value for observation i, μY is the population mean for variable Y, σx is the population standard deviation of X, and σy is the population standard deviation of Y.
+
+### How to use it in our project
+    population_correlation_coefficient(num, num1)
+num and num1 represent two list. For example [1, 2, 3, 4, 5, 1, 1, 4, 8] and [1, 2, 3, 4, 5, 1, 1, 4, 8]
 
 
 ### Confidence Interval
+In statistics, a confidence interval (CI) is a type of interval estimate, computed from the statistics of the observed data, that might contain the true value of an unknown population parameter. The interval has an associated confidence level, or coverage that, loosely speaking, quantifies the level of confidence that the deterministic parameter is captured by the interval. More strictly speaking, the confidence level represents the frequency (i.e. the proportion) of possible confidence intervals that contain the true value of the unknown population parameter. In other words, if confidence intervals are constructed using a given confidence level from an infinite number of independent sample statistics, the proportion of those intervals that contain the true value of the parameter will be equal to the confidence level.
+
+Confidence intervals consist of a range of potential values of the unknown population parameter. However, the interval computed from a particular sample does not necessarily include the true value of the parameter. Based on the (usually taken) assumption that observed data are random samples from a true population, the confidence interval obtained from the data is also random.
+
+The confidence level is designated prior to examining the data. Most commonly, the 95% confidence level is used.[4] However, other confidence levels can be used, for example, 90% and 99%.
+
+Factors affecting the width of the confidence interval include the size of the sample, the confidence level, and the variability in the sample. A larger sample will tend to produce a better estimate of the population parameter, when all other factors are equal. A higher confidence level will tend to produce a broader confidence interval.
+
+For a known standard deviation: 
+
+### How to use it in our project
 
 
 ### Population Variance
