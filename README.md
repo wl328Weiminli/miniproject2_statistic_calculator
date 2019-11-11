@@ -8,22 +8,23 @@
  
 ## Change Log
 
-- [x] add basic Calculators _--Weimin Li_
-- [ ] add Population Mean
-- [ ] add Median
-- [ ] add Mode
-- [ ] add Population Standard Deviation
-- [ ] add Variance of population proportion
-- [ ] add Z-Score
-- [ ] add Standardized score
-- [ ] add Population Correlation Coefficient
-- [ ] add Confidence Interval
-- [ ] add Population Variance
-- [ ] add P Value
-- [ ] add Proportion
-- [ ] add Sample Mean
-- [ ] add Sample Standard Deviation
-- [ ] add Variance of sample proportion
+- [x] add basic Calculators and run the test _--Weimin Li_
+- [x] add Population Mean and run the test _--Weimin Li_
+- [x] add Median and run the test _--Weimin Li_
+- [x] add Mode and run the test _--Weimin Li_
+- [x] add Population Standard Deviation and run the test _--Weimin Li_
+- [x] add Variance of population proportion and run the test _--Weimin Li_
+- [x] add Z-Score and run the test _--Weimin Li_
+- [x] add Population Correlation Coefficient and run the test _--Weimin Li_
+- [x] add Confidence Interval and run the test _--Weimin Li_
+- [x] add Population Variance and run the test _--Weimin Li_
+- [x] add and pass the travis-ci _--jiaxin Du_
+- [x] build the sampe function to generate the sample _--jiaxin Du_
+- [x] add P Value and run the test _--jiaxin Du_
+- [x] add Proportion and run the test _--jiaxin Du_
+- [x] add Sample Mean and run the test _--jiaxin Du_
+- [x] add Sample Standard Deviation and run the test _--jiaxin Du_
+- [x] add Variance of sample proportion and run the test _--jiaxin Du_
 
 ## Functions
 Function description
@@ -75,16 +76,32 @@ The standard deviation of a random variable, statistical population, data set, o
 In addition to expressing the variability of a population, the standard deviation is commonly used to measure confidence in statistical conclusions. For example, the margin of error in polling data is determined by calculating the expected standard deviation in the results if the same poll were to be conducted multiple times. This derivation of a standard deviation is often called the "standard error" of the estimate or "standard error of the mean" when referring to a mean. It is computed as the standard deviation of all the means that would be computed from that population if an infinite number of samples were drawn and a mean for each sample were computed.
 ### Formula
 ![images](/images/a.PNG)
-where {\displaystyle \textstyle \{x_{1},\,x_{2},\,\ldots ,\,x_{N}\}}{\displaystyle \textstyle \{x_{1},\,x_{2},\,\ldots ,\,x_{N}\}} are the observed values of the sample items and {\displaystyle \textstyle {\bar {x}}}{\displaystyle \textstyle {\bar {x}}} is the mean value of these observations, while the denominator N stands for the size of the sample: this is the square root of the sample variance, which is the average of the squared deviations about the sample mean.
 ### How to use it in our project
     population_standard_deviation()
 in the (), you should input a list like [1, 2, 3, 4, 5, 1, 1, 4, 8]
 
-### Variance of population proportion
+### Population Variance
 In the statistical description, the variance is used to calculate the difference between each variable (observation) and the population mean. In order to avoid the sum of the mean deviations being zero, the square of the mean difference and the content of the sample, the statistics use the sum of squared mean deviations to describe the degree of variation of the variables. The formula for calculating the variance of the population:
 ![images](/images/b.PNG)
 ### How to use it in our project
-     population_variance()
+    population_variance()
+in the (), you should input a list like [1, 2, 3, 4, 5, 1, 1, 4, 8]
+
+### Proportion
+A proportion refers to the fraction of the total that possesses a certain attribute.
+
+For example, suppose we have a sample of four pets - a bird, a fish, a dog, and a cat. We might ask what proportion has four legs. Only two pets (the dog and the cat) have four legs. Therefore, the proportion of pets with four legs is 2/4 or 0.50.
+
+### How to use it in our project
+    proportion()
+in the (), you should input a list like [1, 2, 3, 4, 5, 1, 1, 4, 8]
+each number in the list will get a proportion. You will get a list of the each number's proportion.
+
+
+### Variance of population proportion
+It shows the distribution of the data in the proportion way. So we change each number in the data to the proportion and use the variance method to calculator it.
+### How to use it in our project
+     variance_of_population_proportion(num)
 in the (), you should input a list like [1, 2, 3, 4, 5, 1, 1, 4, 8]
 
 ### Z-Score
@@ -129,23 +146,36 @@ The confidence level is designated prior to examining the data. Most commonly, t
 Factors affecting the width of the confidence interval include the size of the sample, the confidence level, and the variability in the sample. A larger sample will tend to produce a better estimate of the population parameter, when all other factors are equal. A higher confidence level will tend to produce a broader confidence interval.
 
 For a known standard deviation: 
+![images](/images/d.PNG)
 
 ### How to use it in our project
-
-
-### Population Variance
+    confidence_interval()
+in the (), you should input a list like [1, 2, 3, 4, 5, 1, 1, 4, 8]
+and you will get a list contain the interval.
 
 
 ### P Value
 
 
-### Proportion
+
 
 
 ### Sample Mean
-
+Random sampling of samples from a set of data, use the sample data calculate the mean.In our project, we have the ability to generate more than 30 sample modules (more than 30 are statistically significant samples, so start from 30) From this, calculate the sample mean.
+### How to use it in our project
+    sample_mean()
+in the (), you should input a list, the number of the list should more than 30.
 
 ### Sample Standard Deviation
+Random sampling of samples from a set of data, use the sample data calculate the Standard Deviation.In our project, we have the ability to generate more than 30 sample modules (more than 30 are statistically significant samples, so start from 30) From this, calculate the Standard Deviation.
 
+### How to use it in our project
+    Sample_Standard_Deviation()
+in the (), you should input a list, the number of the list should more than 30.
 
 ### Variance of sample proportion
+Random sampling of samples from a set of data, use the sample data calculate theVariance of sample proportion.In our project, we have the ability to generate more than 30 sample modules (more than 30 are statistically significant samples, so start from 30). And we have the module to change each data to proportion. From this, calculate the Variance of sample proportion.
+
+### How to use it in our project
+    variance_of_population_proportion()
+in the (), you should input a list, the number of the list should more than 30.
