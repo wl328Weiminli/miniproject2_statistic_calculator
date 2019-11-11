@@ -73,13 +73,17 @@ In statistics, the standard deviation (SD, also represented by the lower case Gr
 The standard deviation of a random variable, statistical population, data set, or probability distribution is the square root of its variance. It is algebraically simpler, though in practice less robust, than the average absolute deviation.[2][3] A useful property of the standard deviation is that, unlike the variance, it is expressed in the same units as the data.
 
 In addition to expressing the variability of a population, the standard deviation is commonly used to measure confidence in statistical conclusions. For example, the margin of error in polling data is determined by calculating the expected standard deviation in the results if the same poll were to be conducted multiple times. This derivation of a standard deviation is often called the "standard error" of the estimate or "standard error of the mean" when referring to a mean. It is computed as the standard deviation of all the means that would be computed from that population if an infinite number of samples were drawn and a mean for each sample were computed.
-### formula
-
-
-
-
+### Formula
+![images](/images/a.PNG)
+where {\displaystyle \textstyle \{x_{1},\,x_{2},\,\ldots ,\,x_{N}\}}{\displaystyle \textstyle \{x_{1},\,x_{2},\,\ldots ,\,x_{N}\}} are the observed values of the sample items and {\displaystyle \textstyle {\bar {x}}}{\displaystyle \textstyle {\bar {x}}} is the mean value of these observations, while the denominator N stands for the size of the sample: this is the square root of the sample variance, which is the average of the squared deviations about the sample mean.
+### How to use it in our project
+    population_standard_deviation()
+in the (), you should input a list like [1, 2, 3, 4, 5, 1, 1, 4, 8]
 
 ### Variance of population proportion
+In the statistical description, the variance is used to calculate the difference between each variable (observation) and the population mean. In order to avoid the sum of the mean deviations being zero, the square of the mean difference and the content of the sample, the statistics use the sum of squared mean deviations to describe the degree of variation of the variables. The formula for calculating the variance of the population:
+![images](/images/b.PNG)
+
 
 
 ### Z-Score
