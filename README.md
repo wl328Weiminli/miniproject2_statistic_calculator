@@ -169,9 +169,13 @@ and you will get a list contain the interval.
 
 ### P Value
 
+**P** is a statistical measure that helps researchers to determine whether their hypothesis is correct. It helps determine the significance of results. The null hypothesis is a default position that there is no relationship between two measured phenomena. It is denoted by H0. An alternative hypothesis is the one you would believe if the null hypothesis is concluded to be untrue. 
 
+P value is a number between 0 and 1. There are tables, spreadsheet programs and statistical software to help calculate the p-value. Level of significance (α) is a pre-defined threshold set by the researcher. It is generally 0.05. A very small p-value, which is lesser than the level of significance indicates that you reject the null hypothesis. P value which is greater than the level of significance indicates that we fail to reject the null hypothesis.
 
+![images](/images/p.PNG)
 
+The overhat_p is Sample Proportion. p0 is Assumed Population Proportion in the Null Hypothesis. n is the Sample Size
 
 ### Sample Mean
 Random sampling of samples from a set of data, use the sample data calculate the mean.In our project, we have the ability to generate more than 30 sample modules (more than 30 are statistically significant samples, so start from 30) From this, calculate the sample mean.
