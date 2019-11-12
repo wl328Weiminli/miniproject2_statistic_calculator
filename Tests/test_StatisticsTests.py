@@ -106,6 +106,9 @@ class MyTestCase(unittest.TestCase):
                          float(row['sample_variance_proportion']))
         self.assertEqual(self.statistics.result, float(row['sample_variance_proportion']))
 
+    def test_sample_method(self):
+        pprint(self.statistics.sample_method(self.column))
+
 
 if __name__ == '__main__':
     unittest.main()
