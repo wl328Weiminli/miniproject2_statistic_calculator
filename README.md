@@ -61,7 +61,7 @@ in the (), you should input a list like [1, 2, 3, 4, 5]
 
 ### Mode
 
-### Definition
+#### Definition
 The mode of a sample is the element that occurs most often in the collection. For example, the mode of the sample [1, 3, 6, 6, 6, 6, 7, 7, 12, 12, 17] is 6. Given the list of data [1, 1, 2, 4, 4] the mode is not unique – the dataset may be said to be bimodal, while a set with more than two modes may be described as multimodal.
 
 For a sample from a continuous distribution, such as [0.935..., 1.211..., 2.430..., 3.668..., 3.874...], the concept is unusable in its raw form, since no two values will be exactly the same, so each value will occur precisely once. In order to estimate the mode of the underlying distribution, the usual practice is to discretize the data by assigning frequency values to intervals of equal distance, as for making a histogram, effectively replacing the values by the midpoints of the intervals they are assigned to. The mode is then the value where the histogram reaches its peak. For small or middle-sized samples the outcome of this procedure is sensitive to the choice of interval width if chosen too narrow or too wide; typically one should have a sizable fraction of the data concentrated in a relatively small number of intervals (5 to 10), while the fraction of the data falling outside these intervals is also sizable. An alternate approach is kernel density estimation, which essentially blurs point samples to produce a continuous estimate of the probability density function which can provide an estimate of the mode.
@@ -72,7 +72,7 @@ in the (), you should input a list like [1, 2, 3, 4, 5, 1, 1, 4, 8]
 
 ### Population Standard Deviation
 
-### Definition
+#### Definition
 In statistics, the standard deviation (SD, also represented by the lower case Greek letter sigma σ for the population standard deviation or the Latin letter s for the sample standard deviation) is a measure of the amount of variation or dispersion of a set of values.[1] A low standard deviation indicates that the values tend to be close to the mean (also called the expected value) of the set, while a high standard deviation indicates that the values are spread out over a wider range.
 
 The standard deviation of a random variable, statistical population, data set, or probability distribution is the square root of its variance. It is algebraically simpler, though in practice less robust, than the average absolute deviation.[2][3] A useful property of the standard deviation is that, unlike the variance, it is expressed in the same units as the data.
@@ -98,7 +98,7 @@ in the (), you should input a list like [1, 2, 3, 4, 5, 1, 1, 4, 8]
 
 ### Proportion
 
-####Definition
+#### Definition
 A proportion refers to the fraction of the total that possesses a certain attribute.
 
 For example, suppose we have a sample of four pets - a bird, a fish, a dog, and a cat. We might ask what proportion has four legs. Only two pets (the dog and the cat) have four legs. Therefore, the proportion of pets with four legs is 2/4 or 0.50.
@@ -121,7 +121,7 @@ in the (), you should input a list like [1, 2, 3, 4, 5, 1, 1, 4, 8]
 #### What Is a Z-Score?
 A Z-score is a numerical measurement used in statistics of a value's relationship to the mean (average) of a group of values, measured in terms of standard deviations from the mean. If a Z-score is 0, it indicates that the data point's score is identical to the mean score. A Z-score of 1.0 would indicate a value that is one standard deviation from the mean. Z-scores may be positive or negative, with a positive value indicating the score is above the mean and a negative score indicating it is below the mean.
 
-Formula
+#### Formula
 ![images](/images/c.PNG)
 
 #### How to use it in our project
@@ -197,3 +197,5 @@ Random sampling of samples from a set of data, use the sample data calculate the
 #### How to use it in our project
     variance_of_population_proportion()
 in the (), you should input a list, the number of the list should more than 30.
+
+Please see https://github.com/dujiaxin/miniprogect1-601-djx/blob/master/miniproject2Term.md for additional terms.
