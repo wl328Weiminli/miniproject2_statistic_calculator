@@ -109,6 +109,10 @@ class MyTestCase(unittest.TestCase):
     def test_sample_method(self):
         pprint(self.statistics.sample_method(self.column))
 
+    def test_p_value_statistics(self):
+        self.assertEqual(self.statistics.p_value(self.column), self.answer_column1)
+        self.assertEqual(self.statistics.result, self.answer_column1)
+
 
 if __name__ == '__main__':
     unittest.main()

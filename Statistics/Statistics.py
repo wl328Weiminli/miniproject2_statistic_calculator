@@ -13,6 +13,7 @@ from Statistics.sample_method import sample_method
 from Statistics.sample_mean import sample_mean
 from Statistics.sample_standard_deviation import Sample_Standard_Deviation
 from Statistics.sample_variance_proportion import sample_variance_proportion
+from Statistics.p_value import p_value
 
 
 class Statistics(Calculator):
@@ -75,4 +76,8 @@ class Statistics(Calculator):
 
     def sample_variance_proportion(self, data):
         self.result = sample_variance_proportion(data)
+        return self.result
+
+    def p_value(self, data):
+        self.result = p_value(data)
         return self.result
