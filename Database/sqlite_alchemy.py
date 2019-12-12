@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, ForeignKey, Integer, String, FLOAT
+from sqlalchemy import Column, ForeignKey, Integer, String, FLOAT, SmallInteger
 from sqlalchemy.orm import relationship
 from sqlalchemy.orm import sessionmaker
 from pprint import pprint
@@ -26,7 +26,23 @@ class Item(Base):
     name = Column(String, nullable=False)
     cost_price = Column(FLOAT, nullable=False)
     selling_price = Column(FLOAT, nullable=False)
-    quantity = Column(FLOAT, nullable=False)
+    quantity = Column(Integer, nullable=False)
+
+
+class Order(Base):
+    __tablename__ = 'orders'
+    id = Column(Integer(), primary_key=True)
+    customer_id = Column(Integer, ForeignKey('customer.id'))
+    orders = relationship("Order", backref='customer')
+
+
+class OrderLine(Base):
+    __tablename__ = 'order_lines'
+    id = Column(Integer(), primary_key=True)
+    order_id = Column(Integer(), ForeignKey('orders.id'))
+    item_id = Column(Integer(), ForeignKey('items.id'))
+    order_lines = relationship("OrderLine", backref='order')
+    quantity = Column(SmallInteger())
 
 
 Base.metadata.create_all(engine)
@@ -52,6 +68,9 @@ c2 = Customer(first_name='Scott',
 
 session.add_all([c1, c2])
 session.commit()
+
+print(c1.id)
+print(c2.id)
 
 c3 = Customer(
     first_name="John",
@@ -101,3 +120,18 @@ i8 = Item(name='Water Bottle', cost_price=20.89, selling_price=25, quantity=50)
 
 session.add_all([i1, i2, i3, i4, i5, i6, i7, i8])
 session.commit()
+
+o1 = Order(customer_id=c1.id)
+o2 = Order(customer_id=c1.id)
+
+line_item1 = OrderLine(order_id=o1.id, item_id=i1.id, quantity=3)
+line_item2 = OrderLine(order_id=o1.id, item_id=i2.id, quantity=2)
+line_item3 = OrderLine(order_id=o2.id, item_id=i1.id, quantity=1)
+line_item4 = OrderLine(order_id=o2.id, item_id=i2.id, quantity=4)
+
+session.add_all([o1, o2])
+
+session.new()
+session.commit()
+
+print('--------------------------------------------------------------------------')
