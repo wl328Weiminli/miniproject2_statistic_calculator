@@ -150,3 +150,27 @@ o3.order_lines.append(orderline2)
 session.add_all([o3])
 
 session.commit()
+
+print("customer1.orders")
+print(c1.orders)
+print()
+
+print("order1.customer")
+print(o1.customer)
+print()
+
+print("customer1.orders(3).order_lines")
+print(c1.orders[2].order_lines)
+print()
+
+print("details of customer1.orders(3).order_lines")
+for ol in c1.orders[2].order_lines:
+    print("ol id:")
+    print(ol.id)
+    print()
+    print("ol.item_id:")
+    print(ol.item_id)
+    print()
+    print("ol.quantity:")
+    print(ol.quantity)
+    print()
