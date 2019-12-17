@@ -1,8 +1,9 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, ForeignKey, Integer, String, FLOAT, SmallInteger
+from sqlalchemy import Column, ForeignKey, Integer, String, FLOAT, SmallInteger,DateTime
 from sqlalchemy.orm import relationship
 from sqlalchemy.orm import sessionmaker
+from datetime import datetime, date
 from pprint import pprint
 
 engine = create_engine('sqlite:////web/Sqlite-Data/lwm.db')
@@ -18,6 +19,9 @@ class Customer(Base):
     email = Column(String(250), nullable=False)
     address = Column(String(250), nullable=False)
     town = Column(String(250), nullable=False)
+    created_on = Column(DateTime(), default=datetime.now)
+    updated_on = Column(DateTime(), default=datetime.now, onupdate=datetime.now)
+    orders = relationship("Order", backref='customer')
 
 
 class Item(Base):
@@ -33,7 +37,8 @@ class Order(Base):
     __tablename__ = 'orders'
     id = Column(Integer(), primary_key=True)
     customer_id = Column(Integer, ForeignKey('customer.id'))
-    orders = relationship("Order", backref='customer')
+    order_lines = relationship("OrderLine", backref='orders')
+    date_placed = Column(DateTime(), default=datetime.now)
 
 
 class OrderLine(Base):
@@ -41,7 +46,6 @@ class OrderLine(Base):
     id = Column(Integer(), primary_key=True)
     order_id = Column(Integer(), ForeignKey('orders.id'))
     item_id = Column(Integer(), ForeignKey('items.id'))
-    order_lines = relationship("OrderLine", backref='order')
     quantity = Column(SmallInteger())
 
 
