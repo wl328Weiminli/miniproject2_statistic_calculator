@@ -36,7 +36,7 @@ class Item(Base):
 class Order(Base):
     __tablename__ = 'orders'
     id = Column(Integer(), primary_key=True)
-    customer_id = Column(Integer, ForeignKey('customer.id'))
+    customer_id = Column(Integer, ForeignKey('customers.id'))
     order_lines = relationship("OrderLine", backref='orders')
     date_placed = Column(DateTime(), default=datetime.now)
 
@@ -140,15 +140,13 @@ session.commit()
 
 print('--------------------------------------------------------------------------')
 
-session.query(Customer).all()
+o3 = Order(customer_id=c1.id)
+orderline1 = OrderLine(item_id=i1.id, quantity=5)
+orderline2 = OrderLine(item_id=i2.id, quantity=10)
 
-session.query(Customer)
+o3.order_lines.append(orderline1)
+o3.order_lines.append(orderline2)
 
-q = session.query(Customer)
+session.add_all([o3])
 
-for c in q:
-    print(c.id, c.first_name)
-
-print()
-
-print(session.query(Customer.id, Customer.first_name).all())
+session.commit()
