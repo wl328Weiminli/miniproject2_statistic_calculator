@@ -193,3 +193,22 @@ for c in q:
 print()
 
 print(session.query(Customer.id, Customer.first_name).all())
+
+print (session.query(Customer).count())
+print(session.query(Item).count())
+print(session.query(Order).count())
+
+print(session.query(Customer).first())
+print(session.query(Item).first())
+print(session.query(Order).first())
+
+print(session.query(Customer).get(1))
+print(session.query(Item).get(1))
+print(session.query(Order).get(100))
+
+print(session.query(Customer).filter(Customer.first_name == 'John').all())
+
+print(session.query(Customer).filter(Customer.first_name == 'John'))
+
+print(session.query(Customer).filter(Customer.id <= 5, Customer.town == "Norfolk").all())
+
